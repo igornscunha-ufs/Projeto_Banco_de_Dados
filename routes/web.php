@@ -24,13 +24,13 @@ Route::get('/movie/del/{id}', 'App\Http\Controllers\MovieController@destroy')->n
 Route::get('/movie/edit/{id}', 'App\Http\Controllers\MovieController@edit')->name('editar_filme');
 Route::post('/movie/edit/{id}', 'App\Http\Controllers\MovieController@update')->name('atualizar_filme');
 
-//Rotas Ingresso
-Route::get('/ticket/list', 'App\Http\Controllers\TicketController@show');
-Route::get('/ticket/new', 'App\Http\Controllers\TicketController@create');
-Route::post('/ticket/new', 'App\Http\Controllers\TicketController@store');
-Route::get('/ticket/del/{id}', 'App\Http\Controllers\TicketController@destroy')->name('excluir_ingresso');
-Route::get('/ticket/edit/{id}', 'App\Http\Controllers\TicketController@edit')->name('editar_ingresso');
-Route::post('/ticket/edit/{id}', 'App\Http\Controllers\TicketController@update')->name('atualizar_ingresso');
+//Rotas Sessão
+Route::get('/session/list', 'App\Http\Controllers\SessionController@show');
+Route::get('/session/new', 'App\Http\Controllers\SessionController@create');
+Route::post('/session/new', 'App\Http\Controllers\SessionController@store');
+Route::get('/session/del/{id}', 'App\Http\Controllers\SessionController@destroy')->name('excluir_sessao');
+Route::get('/session/edit/{id}', 'App\Http\Controllers\SessionController@edit')->name('editar_sessao');
+Route::post('/session/edit/{id}', 'App\Http\Controllers\SessionController@update')->name('atualizar_sessao');
 
 //Rotas Usuario
 Route::get('/user/list', 'App\Http\Controllers\UserController@show');
@@ -38,4 +38,4 @@ Route::get('/user/new', 'App\Http\Controllers\UserController@create');
 Route::post('/user/new', 'App\Http\Controllers\UserController@store');
 Route::get('/user/del/{id}', 'App\Http\Controllers\UserController@destroy')->name('excluir_usuario');
 Route::get('/user/edit/{id}', 'App\Http\Controllers\UserController@edit')->name('editar_usuario');
-Route::post('/user/edit/{id}', 'App\Http\Controllers\UserController@update')->name('atualizar_usuario');
+Route::post('/user/edit/{id}', 'App\Http\Controllers\UserController@update')->name('atualizar_');
