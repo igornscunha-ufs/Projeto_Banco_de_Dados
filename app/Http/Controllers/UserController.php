@@ -22,7 +22,7 @@ class UserController extends Controller
 
     public function show(){
         $users = Users::all();
-        return view("cinema.todos",['users'=> $users]);
+        return view("cinema.todosusuarios",['users'=> $users]);
     }
     public function destroy($id){
         $user = User::findOrFail($id);

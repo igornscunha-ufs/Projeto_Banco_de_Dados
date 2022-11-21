@@ -12,7 +12,7 @@ class TicketController extends Controller
     }
     public function store(Request $request){
         Ticket::create([
-            'id_ingresso' => $request->get('id_ingresso'),
+            'id_ingresso' =>$request->get('id_ingresso'),
             'filme_nome' =>$request->get('filme_nome'),
             'valor' =>$request->get('valor'),
             'sala' =>$request->get('sala'),
@@ -24,7 +24,7 @@ class TicketController extends Controller
 
     public function show(){
         $tickets = Ticket::all();
-        return view("cinema.todos",['tickets'=> $tickets]);
+        return view("cinema.todosingressos",['tickets'=> $tickets]);
     }
     public function destroy($id){
         $ticket = Ticket::findOrFail($id);

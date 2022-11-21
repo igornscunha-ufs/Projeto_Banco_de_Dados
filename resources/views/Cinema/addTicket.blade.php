@@ -8,19 +8,19 @@
             label{
                 float: left;
                 display: block;
-                width: 90px;
+                width: 120px;
             }
         </style>
     </head>
     <body>
-        <form>
+        <form action= "{{ url('ticket/new')}}" method="post">
         @csrf
-            <div><label for="id_ingresso">ID do Ingresso</label><input type="number" name="id_ingresso" id="id_ingresso"></div>
-            <div><label for="filmes_nome">Nome do Filme</label><input type="text" name="filmes_nome" id="filmes_nome"></div>
-            <div><label for="preco">Preço</label><input type="number" name="preco" id="preco"></div>
+            <div><label for="id_ingresso">ID do Ingresso</label><input type="text" name="id_ingresso" id="id_ingresso"></div>
+            <div><label for="filme_nome">Nome do Filme</label><input type="text" name="filme_nome" id="filme_nome"></div>
+            <div><label for="valor">Preço</label><input type="text" name="valor" id="valor"></div>
             <div><label for="sala">Sala</label><input type="text" name="sala" id="sala"></div>
             <div><label for="cadeira">Cadeira</label><input type="text" name="cadeira" id="cadeira"></div>
-            <div><label for="horario">Horário</label><input type="time" name="horario" id="horario"></div>
+            <div><label for="horario">Horário</label><input type="text" name="horario" id="horario"></div>
             <button type="submit">Salvar</button>
         </form>
     </body>

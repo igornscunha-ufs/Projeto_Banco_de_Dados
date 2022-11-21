@@ -13,12 +13,12 @@
         </style>
     </head>
     <body>
-        <form>
+        <form action= "{{ url('user/new')}}" method="post">
         @csrf
             <div><label for="nome">Nome</label><input type="text" name="nome" id="nome"></div>
-            <div><label for="cpf">Cpf</label><input type="number" name="cpf" id="cpf"></div>
+            <div><label for="cpf">Cpf</label><input type="text" name="cpf" id="cpf"></div>
             <div><label for="tipo">Tipo</label><input type="text" name="tipo" id="tipo"></div>
-            <div><label for="email">Email</label><input type="email" name="email" id="email"></div>
+            <div><label for="email">Email</label><input type="text" name="email" id="email"></div>
             <button type="submit">Salvar</button>
         </form>
     </body>

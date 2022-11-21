@@ -13,7 +13,7 @@
         </style>
     </head>
     <body>
-        <form action="{{ route('atualizar_filme', ['id' => $movie->id])}}" method="post">
+        <form action="{{ route('atualizar_filme', ['id' => $movie->id]) }}" method="post">
         @csrf
             <div><label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" value="{{$movie->nome}}" ></div> 
