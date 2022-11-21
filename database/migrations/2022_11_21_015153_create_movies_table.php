@@ -13,8 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tickets', function (Blueprint $table) {
+        Schema::create('movies', function (Blueprint $table) {
             $table->id();
+            $table->string('nome', 100);
+            $table->string('sinopse', 280);
+            $table->string('duracao', 5);
+            $table->string('genero', 50);
+            $table->string('faixa_etaria', 100);
+            $table->string('qnt_ingresso', 100);
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tickets');
+        Schema::dropIfExists('movies');
     }
 };
