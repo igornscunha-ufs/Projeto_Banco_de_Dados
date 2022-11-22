@@ -15,4 +15,7 @@ class User extends Model
         'tipo',
         'email'
     ];
+    public function sessions(){
+        return $this->belongsToMany(Session::class, 'user_sessions');
+    }
 }

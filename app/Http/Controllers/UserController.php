@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Session;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Symfony\Contracts\EventDispatcher\Event;
 
 class UserController extends Controller
 {
@@ -42,5 +44,9 @@ class UserController extends Controller
             'email' =>$request->get('email')
         ]);
         return "Usuário Atualizado com Sucesso";
+    }
+    public function booksession(Request $request, User $user, Session $session){
+        $user->sessions()->save($session);
+        return "Sessão reservada com sucesso";
     }
 }

@@ -15,4 +15,8 @@ class Session extends Model
         'sala',
         'horario'
     ];
+
+    public function users(){
+        return $this->belongsToMany(User::class, 'user_sessions');
+    }
 }

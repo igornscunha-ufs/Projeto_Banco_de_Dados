@@ -39,3 +39,4 @@ Route::post('/user/new', 'App\Http\Controllers\UserController@store');
 Route::get('/user/del/{id}', 'App\Http\Controllers\UserController@destroy')->name('excluir_usuario');
 Route::get('/user/edit/{id}', 'App\Http\Controllers\UserController@edit')->name('editar_usuario');
 Route::post('/user/edit/{id}', 'App\Http\Controllers\UserController@update')->name('atualizar_');
+Route::get('/user/{user}/session/{session}/book', 'App\Http\Controllers\UserController@booksession')->name('reservar_sessao');
