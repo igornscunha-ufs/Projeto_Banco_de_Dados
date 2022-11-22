@@ -17,7 +17,7 @@ class SessionController extends Controller
             'sala' =>$request->get('sala'),
             'horario'=>$request->get('horario'),
         ]);
-        return "Sessão salva com sucesso";
+        return view('confirma.sessao.salve');
     }
 
     public function show(){
@@ -27,7 +27,7 @@ class SessionController extends Controller
     public function destroy($id){
         $session = Session::findOrFail($id);
         $session->delete();
-        return "Sessao removida com sucesso";
+        return view('confirma.sessao.del');
     }
     public function edit($id){
         $session = Session::findOrFail($id);
@@ -41,6 +41,6 @@ class SessionController extends Controller
             'sala' =>$request->get('sala'),
             'horario'=>$request->get('horario')
         ]);
-        return "Sessão atualizada com Sucesso";
+        return view('confirma.sessao.up');
     }
 }

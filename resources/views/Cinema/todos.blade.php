@@ -22,5 +22,7 @@
                     title="Excluir Filme" >Excluir</a></td>
             </tr>
         @endforeach
+        <td><a href=" {{ route('adicionar_filme')}}"
+             title="Adicionar Filme" >Adicionar</a></td>
     </body>
 </html>

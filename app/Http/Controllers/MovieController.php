@@ -19,7 +19,7 @@ class MovieController extends Controller
             'faixa_etaria'=>$request->get('faixa_etaria'),
             'qnt_ingresso'=>$request->get('qnt_ingresso')
         ]);
-        return "Filme salvo com sucesso";
+        return view('confirma.movie.salve');
     }
 
     public function show(){
@@ -29,7 +29,7 @@ class MovieController extends Controller
     public function destroy($id){
         $movie = Movie::findOrFail($id);
         $movie->delete();
-        return "Filme removido com sucesso";
+        return view('confirma.movie.del');
     }
     public function edit($id){
         $movie = Movie::findOrFail($id);
@@ -45,6 +45,6 @@ class MovieController extends Controller
             'faixa_etaria'=>$request->get('faixa_etaria'),
             'qnt_ingresso'=>$request->get('qnt_ingresso')
         ]);
-        return "Filme Atualizado com Sucesso";
+        return view('confirma.movie.up');
     }
 }

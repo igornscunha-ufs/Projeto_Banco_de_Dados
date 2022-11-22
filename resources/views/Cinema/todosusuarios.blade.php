@@ -20,5 +20,7 @@
                     title="Excluir Usuário" >Excluir</a></td>
             </tr>
         @endforeach
+        <td><a href=" {{ route('adicionar_usuario')}}"
+            title="Adicionar Usuário" >Adicionar</a></td>
     </body>
 </html>

@@ -19,17 +19,17 @@ class UserController extends Controller
             'tipo' =>$request->get('tipo'),
             'email' =>$request->get('email')
         ]);
-        return "Usuário salvo com sucesso";
+        return view('confirma.usu.salve');
     }
 
     public function show(){
-        $users = Users::all();
+        $users = User::all();
         return view("cinema.todosusuarios",['users'=> $users]);
     }
     public function destroy($id){
         $user = User::findOrFail($id);
         $user->delete();
-        return "Usuário removido com sucesso";
+        return view('confirma.usu.del');
     }
     public function edit($id){
         $user = User::findOrFail($id);
@@ -43,10 +43,10 @@ class UserController extends Controller
             'tipo' =>$request->get('tipo'),
             'email' =>$request->get('email')
         ]);
-        return "Usuário Atualizado com Sucesso";
+        return view('confirma.usu.up');    
     }
     public function booksession(Request $request, User $user, Session $session){
         $user->sessions()->save($session);
-        return "Sessão reservada com sucesso";
+        return view('confirma.usu.book');
     }
 }
